@@ -1,0 +1,28 @@
+{{#error}}
+	<div class="error">
+		Не получается загрузить плейлист
+	</div>
+{{/error}}
+
+<div class="dates">
+    <ul>
+        {{#days}}
+            <li class="{{className}}"><a href="{{href}}">{{dayString}}</a></li>
+        {{/days}}
+    </ul>
+    <h3>{{monthString}}</h3>
+</div>
+
+<hr class="timeline" />
+
+<ul class="hours">
+    {{#hours}}
+        <li class="{{className}}"><a href="{{href}}">{{hourString}}</a></li>
+    {{/hours}}
+</ul>
+
+<ul class="songs">
+    {{#songs}}
+        <li class="{{className}}"><span class="time">{{time}}</span> {{singer}} - {{songName}}</li>
+    {{/songs}}
+</ul>
