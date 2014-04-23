@@ -82,7 +82,6 @@ define(
                     if ( xhr && xhr.status == EnumResponseCode.OK ) {
                         self.trigger(EnumResponseCode.OK);
                     }
-                    self.trigger('loadCounter', --self.loadCounter);
 
                     var lines = $.trim(data).split(/\r\n|\n/)
                         , headers = ['time', 'code', 'name', 'singer']
@@ -109,6 +108,8 @@ define(
                             });
                         }
                     }
+
+                    self.trigger('loadCounter', --self.loadCounter);
                 },
 
                 _loadedError: function( self, data, options )

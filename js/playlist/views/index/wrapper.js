@@ -116,8 +116,6 @@ define(
                         case 4:
                             cssClass = 'next-next';
                             break;
-                        default:
-                            cssClass = 'disabled'
                     }
                     if (daysLoaded.filter(function(dayLoaded){ return dayLoaded === day}).length === 0)
                         cssClass += ' disabled';

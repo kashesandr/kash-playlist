@@ -32,8 +32,8 @@ define(
         var Router = Backbone.Router.extend({
 
             currentDay: moment().format("YYYY-MM-DD")
-            , dayCurrent: null
-            , hourCurrent: null
+            , dayCurrent: 0
+            , hourCurrent: 12
             ,
 
             routes: {
